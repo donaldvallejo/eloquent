@@ -6,13 +6,30 @@ class App extends Component {
   render() {
 
     let min = (x,y) => {
-      let reduce = () => {
-        x % 1 === 0;
-        y % 1 === 0;
+      if(x > y) {
+        console.log(y)
+      } else if(x < y) {
+        console.log(x)
+      } else {
+        console.log(x,y)
       }
-      console.log(x,y)
     }
-    min(11, 12)
+    min(3, 2)
+
+    let isEven = (x) => {
+      if(x === 0) {
+        console.log("Even!", x)
+      } else if (x === 1) {
+        console.log("Odd", x)
+      } else {
+        return isEven(x - 2);
+      }
+    }
+    // console.log(x)
+    isEven(50);
+    
+
+isEven(50)
     return (
       <div className="App">
         <header className="App-header">
