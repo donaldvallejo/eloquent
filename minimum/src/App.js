@@ -5,31 +5,41 @@ import './App.css';
 class App extends Component {
   render() {
 
-    let min = (x,y) => {
-      if(x > y) {
-        console.log(y)
-      } else if(x < y) {
-        console.log(x)
-      } else {
-        console.log(x,y)
+    let countBs = (x) => {
+      let count = 0;
+      for(var i = 0; i < x.length; i++) {
+        if(x.charAt(i) === "B") {
+          count++
+        } 
+        // console.log(count, "test1");
       }
+      console.log(count, "test2");
     }
-    min(3, 2)
+    countBs("sup B is you BBBBBB workin B?");
 
-    let isEven = (x) => {
-      if(x === 0) {
-        console.log("Even!", x)
-      } else if (x === 1) {
-        console.log("Odd", x)
-      } else {
-        return isEven(x - 2);
-      }
-    }
-    // console.log(x)
-    isEven(50);
+    // let min = (x,y) => {
+    //   if(x > y) {
+    //     console.log(y)
+    //   } else if(x < y) {
+    //     console.log(x)
+    //   } else {
+    //     console.log(x,y)
+    //   }
+    // }
+    // min(3, 2)
+
+    // let isEven = (x) => {
+    //   if(x === 0) {
+    //     console.log("Even!", x)
+    //   } else if (x === 1) {
+    //     console.log("Odd", x)
+    //   } else {
+    //     return isEven(x - 2);
+    //   }
+    // }
+    // isEven(50);
     
 
-isEven(50)
     return (
       <div className="App">
         <header className="App-header">
