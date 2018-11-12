@@ -5,17 +5,28 @@ import './App.css';
 class App extends Component {
   render() {
 
-    let countBs = (x) => {
+    // let countBs = (x) => {
+    //   let count = 0;
+    //   for(var i = 0; i < x.length; i++) {
+    //     if(x.charAt(i) === "B") {
+    //       count++
+    //     } 
+    //     // console.log(count, "test1");
+    //   }
+    //   console.log(count, "test2");
+    // }
+    // countBs("sup B is you workin B?");
+
+    let countChar = (x) => {
       let count = 0;
       for(var i = 0; i < x.length; i++) {
-        if(x.charAt(i) === "B") {
+        if(x.charAt(i) !== "B") {
           count++
         } 
-        // console.log(count, "test1");
       }
-      console.log(count, "test2");
+      console.log(count, "test1");
     }
-    countBs("sup B is you BBBBBB workin B?");
+    countChar("sup BB is you workin BBBB?");
 
     // let min = (x,y) => {
     //   if(x > y) {
